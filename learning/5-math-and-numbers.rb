@@ -1,4 +1,4 @@
-# ruby 5-math-and-numbers.rb -v
+# ruby 5-math-and-numbers.rb
 num_a = 5.0
 num_b = 2.0
 

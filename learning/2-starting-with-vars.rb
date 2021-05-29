@@ -1,4 +1,4 @@
-# ruby 2-starting-with-vars.rb -v
+# ruby 2-starting-with-vars.rb
 # String Variable 'character_name' and 'character_age'
 character_name = "Plínio"
 character_age  = "70"

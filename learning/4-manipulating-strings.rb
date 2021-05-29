@@ -1,4 +1,4 @@
-# ruby 4-manipulating-strings.rb -v
+# ruby 4-manipulating-strings.rb
 
 # Quotation mark inside a string
 phrase = "They see me \"Rolling\"..."

@@ -1,4 +1,4 @@
-# ruby 3-data-types.rb -v
+# ruby 3-data-types.rb
 # <== Strings ==>
 
 name = "Mike"

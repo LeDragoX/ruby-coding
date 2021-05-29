@@ -1,4 +1,4 @@
-# ruby 1-printing-output.rb -v
+# ruby 1-printing-output.rb
 # Print vs Puts
 print "Hello World!" 
 
