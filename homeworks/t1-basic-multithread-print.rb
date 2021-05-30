@@ -1,9 +1,18 @@
 # WIP
-def ThreadedPrinting(message)
-    puts (message)
+
+class MultiMan
+    attr_accessor :message
+
+    def initialize(message)
+        @message = message
+    end
+
+    def ThreadedPrinting()
+        puts (@message)
+    end
 end
 
+
 lst = ['Programação Paralela', 'Instituto Federal Fluminense']
-for value in lst do
-    ThreadedPrinting(value)
-end
+multi1 = MultiMan.new(lst)
+multi1.ThreadedPrinting()
