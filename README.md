@@ -1,4 +1,6 @@
-# RubyCoding
+<h1>
+    <img width=30px src="./img/ruby-icon.png"> RubyCoding 
+</h1>
 I'll put some Ruby codes as i'm still learning it (Extra sauce included)
 
 ## Dependencies (Linux)
