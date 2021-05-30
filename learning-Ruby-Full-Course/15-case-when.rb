@@ -1,5 +1,6 @@
 # ruby 15-case-when.rb
 
+# Function to get a day name based on the abbreviation
 def get_day_name (day = "mon")
     day_name = ""
 
@@ -26,4 +27,5 @@ def get_day_name (day = "mon")
 end
 
 print ("Enter a day: ")
+# Print the function passing by parameter the user input downcased
 puts (get_day_name(gets().chomp().downcase()))
