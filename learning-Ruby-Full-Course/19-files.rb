@@ -47,7 +47,7 @@ File.open("data/dummy.txt", "a") do |file|
 end
 
 # Writing on Files
-File.open("data/index.html", "w") do |file|
+File.open("data/dummy.html", "w") do |file|
     file.write("<h1>OwO World!</h1>")
 end
 
