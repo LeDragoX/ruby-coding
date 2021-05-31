@@ -20,6 +20,5 @@ class MultiMan
     end
 end
 
-
 lst = ['Programação Paralela', 'Instituto Federal Fluminense']
 multi1 = MultiMan.new(lst)
