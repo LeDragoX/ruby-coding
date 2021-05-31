@@ -18,10 +18,10 @@ rvm requirements
 gem install solargraph
 ```
 
-## Ruby Programming Language - Full Course
+## 1 - Ruby Programming Language - Full Course (ENG)
 - https://youtu.be/t_ispmWmdjY
 
-## Conhecendo Ruby
+## 2 - Conhecendo Ruby (PT-BR)
 - https://leanpub.com/conhecendo-ruby
 
 ## License
