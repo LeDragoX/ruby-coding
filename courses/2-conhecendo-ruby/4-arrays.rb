@@ -1,4 +1,4 @@
-# ruby 3-arrays.rb
+puts "<== ARRAYS ==>"   # Page 41
 
 array = [1, 2, 3, 4, 5]
 puts "Two ways of printing"

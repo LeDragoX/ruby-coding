@@ -1,4 +1,4 @@
-puts "<== HASHES ==> (Like Dictionaries)"   # 47
+puts "<== HASHES ==> (Like Dictionaries)"   # Page 47
 puts "Hashes are like Indexed Arrays, using a key and value"
 hash = { 
     #Key    =>  value
@@ -40,7 +40,13 @@ sleep(1)
 puts "#{hash[:dois]}"
 
 puts "Another way to create hashes"
-puts "#{hash = {john: "guitarra e voz",paul: "baixo e voz",george: "guitarra", ringo: "bateria"}}"
+puts "#{
+    hash = {
+        john: "guitarra e voz",
+        paul: "baixo e voz",
+        george: "guitarra",
+        ringo: "bateria"}
+    }"
 
 puts "Like Arrays, we can 'dig'"
 puts "#{hash = { a: { b: { c: 3 } } }}"

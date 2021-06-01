@@ -1,6 +1,5 @@
 # ruby 1-data-types.rb
-
-puts("<== INTEGERS ==>")
+puts("<== INTEGERS ==>")    # Page 22
 
 puts((2**30)-1)
 puts(((2**30)-1).class)
