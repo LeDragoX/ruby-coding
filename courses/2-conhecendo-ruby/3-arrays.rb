@@ -53,17 +53,7 @@ puts "#{array = [0, [1, [2, 3]]]}"
 puts "#{array[1][1][0]}"
 puts "Or with array.dig(args): \n#{array.dig(1, 1, 0)}"
 
-puts "<== Duck Typing ==>"
+puts "<== DUCK TYPING ==>"
 puts "Having the << operator means that a Object can receive that"
 puts "#{String.new.respond_to?(:<<)}"
 puts "#{String.new.kind_of?(String)}"
-
-puts "<== RANGES ==>"   # Page 46
-
-puts "Creating a range interval 0 to 10"
-puts "#{range1 = (0..10)}"
-puts "#{range1.each { |valor| print "#{valor} " }}"
-
-puts "Creating a range interval 0 to 9"
-puts "#{range2 = (0...10)}"
-puts "#{range2.each { |valor| print "#{valor} " }}"
