@@ -6,11 +6,11 @@ class MultiMan
     def initialize(message)
         @message = message
 
-        ThreadedPrinting(@message)
+        ThreadedPrinting()
     end
 
-    def ThreadedPrinting(message = @message)
-        for str in message do
+    def ThreadedPrinting()
+        for str in @message do
             thread = Thread.new do
                 puts "Thread [#{thread.object_id}]: #{str}"
                 #sleep 0.5
