@@ -23,6 +23,7 @@ gem install solargraph
 
 ## 2 - Conhecendo Ruby (PT-BR)
 - https://leanpub.com/conhecendo-ruby
+- FULL REPOSITORY: https://github.com/taq/conhecendo-ruby-files
 
 ## License
 
