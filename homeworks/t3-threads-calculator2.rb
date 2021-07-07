@@ -1,34 +1,31 @@
 def inputHandle(msg = "Input:", isInt = false)
-  print "#{msg + " "}"
+  print "#{msg} "
+  
   if (isInt == true)
     return gets.chomp.to_i
   end
+
   if (isInt == false)
     return gets.chomp.to_f
   end
 end
 
-def createThread(n, a, b, operation, name)
+def createThread(ops, n, a, b)
+  ops.each do |op, op_properties_lst| 
+    doOperation(op, op_properties_lst[0], op_properties_lst[1], n, a, b)
+  end
+end
+
+def doOperation(operation, name, sleepSeconds, n, a, b)
   semaphore = Mutex.new
 
-  puts "#{semaphore.inspect} - #{operation} - #{name}"
   Thread.new do
-    counter      = 1
-    sleepLimit   = 10
-    sleepSeconds = rand(1..sleepLimit)
-
     semaphore.synchronize {
-      puts "Tempo que a thread[#{self.object_id}] #{name} irá dormir: #{sleepSeconds}"
-      while (counter <= n)
-
-        sleep(sleepSeconds)
-        puts "[#{counter}x] #{name}: #{a.send(operation, b)}"
-        counter += 1
-
-      end
+      sleep(sleepSeconds)
+      
+      puts "[#{n}x] #{name}: #{a.send(operation, b)}"
     }
-  end
-
+  end.join
 end
 
 def main
@@ -45,17 +42,20 @@ def main
     b = inputHandle("Digite o valor de B (B != 0):")
   end
 
-  puts "\nExecuções:  #{n}x,\nValor de A: #{a},\nValor de B: #{b}"
+  puts "\nExecuções:  #{n}x,\nValor de A: #{a},\nValor de B: #{b} \n\n"
 
+  sleepLimit = 10
   ops = {
-    :+ => "SOMA",
-    :- => "SUBTRACAO",
-    :* => "MULTIPLICACAO",
-    :/ => "DIVISAO"
+    :+ => ["SOMA", rand(1..sleepLimit)],
+    :- => ["SUBTRACAO", rand(1..sleepLimit)],
+    :* => ["MULTIPLICACAO", rand(1..sleepLimit)],
+    :/ => ["DIVISAO", rand(1..sleepLimit)]
   }
 
-  ops.map { |op, name| createThread(n, a, b, op, name) }
-  .each(&:join)
+  ops.map { |op, op_properties_lst| puts "Tempo que a thread #{op_properties_lst[0]} irá dormir: #{op_properties_lst[1]}" }
+  puts "\n"
+
+  n.times { |n| createThread(ops, (n+1), a, b); puts "\n" }
 
 end
 
