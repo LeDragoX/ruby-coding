@@ -10,9 +10,8 @@ end
 
 def createThread(n, a, b, operation, name)
   semaphore = Mutex.new
-  threads = []
 
-  threads << Thread.new do
+  Thread.new do
     counter      = 1
     sleepLimit   = 10
     sleepSeconds = rand(1..sleepLimit)
@@ -31,7 +30,6 @@ def createThread(n, a, b, operation, name)
     }
   end
 
-  threads.each {|t| t.join }
 end
 
 def __main__
