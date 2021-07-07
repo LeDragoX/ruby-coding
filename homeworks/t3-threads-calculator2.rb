@@ -11,28 +11,27 @@ end
 def createThread(n, a, b, operation, name)
   semaphore = Mutex.new
 
+  puts "#{semaphore.inspect} - #{operation} - #{name}"
   Thread.new do
     counter      = 1
     sleepLimit   = 10
     sleepSeconds = rand(1..sleepLimit)
 
-    puts "Tempo que a thread[#{self.object_id}] #{name} irá dormir: #{sleepSeconds}"
     semaphore.synchronize {
+      puts "Tempo que a thread[#{self.object_id}] #{name} irá dormir: #{sleepSeconds}"
       while (counter <= n)
 
         sleep(sleepSeconds)
         puts "[#{counter}x] #{name}: #{a.send(operation, b)}"
         counter += 1
 
-        #semaphore.lock()
-        #semaphore.unlock()
       end
     }
   end
 
 end
 
-def __main__
+def main
   n = 0
   a = 0
   b = 0
@@ -60,4 +59,4 @@ def __main__
 
 end
 
-__main__()
+main()
