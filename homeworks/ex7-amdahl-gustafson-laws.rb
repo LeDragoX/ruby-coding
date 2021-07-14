@@ -36,7 +36,7 @@ def calcGustafson(p_number, alpha)
       print " #{speedup90}%  |" if (speedup90 >= 10 && speedup90 < 100)
 
       puts
-      file.write("#{n}, #{speedup5}, #{speedup10}, #{speedup50}, #{speedup70}, #{speedup90}\n")
+      file.write("#{n}, #{speedup5}%, #{speedup10}%, #{speedup50}%, #{speedup70}%, #{speedup90}%\n")
     end
     puts "==========================================================="
   end
@@ -67,20 +67,20 @@ def calcAmdahl(p_number, s)
       print " #{speedup5}%  |" if (speedup5 < 10)
       print " #{speedup5}% |" if (speedup5 >= 10 && speedup5 <= 100)
 
-      print " #{speedup10}%   |" if (speedup10 < 10)
+      print " #{speedup10}%  |" if (speedup10 < 10)
       print " #{speedup10}%  |" if (speedup10 >= 10 && speedup10 <= 100)
 
-      print " #{speedup50}%   |" if (speedup50 < 10)
+      print " #{speedup50}%  |" if (speedup50 < 10)
       print " #{speedup50}%  |" if (speedup50 >= 10 && speedup50 <= 100)
 
-      print " #{speedup70}%   |" if (speedup70 < 10)
+      print " #{speedup70}%  |" if (speedup70 < 10)
       print " #{speedup70}%  |" if (speedup70 >= 10 && speedup70 <= 100)
 
       print " #{speedup90}%   |" if (speedup90 < 10)
       print " #{speedup90}%  |" if (speedup90 >= 10 && speedup90 <= 100)
 
       puts
-      file.write("#{n}, #{speedup5}, #{speedup10}, #{speedup50}, #{speedup70}, #{speedup90}\n")
+      file.write("#{n}, #{speedup5}%, #{speedup10}%, #{speedup50}%, #{speedup70}%, #{speedup90}%\n")
     end
     puts "==========================================================="
   end
