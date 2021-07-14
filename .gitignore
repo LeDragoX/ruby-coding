@@ -1,2 +1,3 @@
 # An Infinite appended file
-**/data/dummy.*
+courses/**/data/dummy.*
+courses/**/data/employees.*
